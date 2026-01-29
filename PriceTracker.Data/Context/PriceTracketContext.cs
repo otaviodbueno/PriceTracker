@@ -12,10 +12,16 @@ public partial class PriceTrackerContext : DbContext
     {
     }
 
+    #region DbSet Produto
     public virtual DbSet<Produto> Produto { get; set; }
 
     public virtual DbSet<ProdutoSite> ProdutoSite { get; set; }
 
     public virtual DbSet<ProdutoHistorico> ProdutoHistorico { get; set; }
 
-}
+    public virtual DbSet<Site> Site { get; set; }
+    #endregion
+
+    public virtual DbSet<Servico> Servico { get; set; } 
+
+    }

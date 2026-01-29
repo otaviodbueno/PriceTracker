@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 public interface IRepository<T> where T : class
 {
     T? GetById(int id);
-    Task<T?> GetByIdAsync(int id);
+    Task<T?> GetByIdAsync(long id);
 
     IEnumerable<T> List();
     Task<List<T>> ListAsync();

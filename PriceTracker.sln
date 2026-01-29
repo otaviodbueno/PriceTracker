@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36705.20 d17.14
+VisualStudioVersion = 17.14.36705.20
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceTracker.Api", "PriceTracker\PriceTracker.Api.csproj", "{48FCC324-2838-4ED8-AEE1-9988CAD7BD84}"
 EndProject
@@ -14,6 +14,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.  Data", "3.  Data", "{E3CCA9CC-7C27-4725-8A2C-0ED6C1D329BC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceTracker.Service", "PriceTracker.Service\PriceTracker.Service.csproj", "{75C89D89-92E0-415F-8AF5-7DA4D9C18F8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceTracker.Business", "PriceTracker.Business\PriceTracker.Business.csproj", "{CDD880EB-38AA-4C66-96A5-C34C47919F9D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Business", "4. Business", "{0463CD5E-BAA3-41A0-AB7E-9807C2E25272}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,10 @@ Global
 		{75C89D89-92E0-415F-8AF5-7DA4D9C18F8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75C89D89-92E0-415F-8AF5-7DA4D9C18F8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75C89D89-92E0-415F-8AF5-7DA4D9C18F8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDD880EB-38AA-4C66-96A5-C34C47919F9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDD880EB-38AA-4C66-96A5-C34C47919F9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDD880EB-38AA-4C66-96A5-C34C47919F9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDD880EB-38AA-4C66-96A5-C34C47919F9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +49,7 @@ Global
 		{48FCC324-2838-4ED8-AEE1-9988CAD7BD84} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{E289F918-CBBE-49B6-A2FB-1EB8CE29B8F0} = {E3CCA9CC-7C27-4725-8A2C-0ED6C1D329BC}
 		{75C89D89-92E0-415F-8AF5-7DA4D9C18F8B} = {3C6BA1C2-919E-4FAA-8C84-C1BDEB6AAD79}
+		{CDD880EB-38AA-4C66-96A5-C34C47919F9D} = {0463CD5E-BAA3-41A0-AB7E-9807C2E25272}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {379095BD-06F6-4B37-8B5D-501BCCFC2705}

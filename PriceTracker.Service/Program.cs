@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using PriceTracker.Business;
 using PriceTracker.Data;
 using PriceTracker.Service;
 
@@ -27,10 +28,14 @@ builder.Services.AddScoped<IServicoRepository, ServicoRepository>();
 // =======================
 
 builder.Services.AddScoped<IJobExecuter, JobExecuter>();
+builder.Services.AddScoped<ISiteRepository, SiteRepository>();
+builder.Services.AddScoped<IProdutoSiteRepository, ProdutoSiteRepository>();
+builder.Services.AddScoped<IProdutoHistoricoRepository, ProdutoHistoricoRepository>();
+builder.Services.AddScoped<IProdutoHistoricoBusiness, ProdutoHistoricoBusiness>();
 
 // Cada serviço executor entra aqui
-builder.Services.AddScoped<IServicoExecutor, AmazonSearchItemPriceService>();
-// builder.Services.AddScoped<IServicoExecutor, OutroServicoExecutor>();
+builder.Services.AddScoped<IServicoExecutor, KabumSearchItemPriceService>();
+
 
 // =======================
 // Worker

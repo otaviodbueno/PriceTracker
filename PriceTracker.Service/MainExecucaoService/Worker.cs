@@ -3,12 +3,12 @@ namespace PriceTracker.Service
     public class Worker : BackgroundService
     {
         private readonly ILogger<Worker> _logger;
-        private readonly IJobExecuter _jobExecuter;
+        private readonly IServiceScopeFactory _scopeFactory;
 
-        public Worker(ILogger<Worker> logger, IJobExecuter jobExecuter)
+        public Worker(ILogger<Worker> logger, IServiceScopeFactory scopeFactory)
         {
             _logger = logger;
-            _jobExecuter = jobExecuter;
+            _scopeFactory = scopeFactory;
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -19,7 +19,12 @@ namespace PriceTracker.Service
 
                 try
                 {
-                    await _jobExecuter.ExecuteServiceAsync();
+                    using (var scope = _scopeFactory.CreateScope()) // Cria um escopo para o jobExecuter
+                    {
+                        var jobExecuter = scope.ServiceProvider.GetRequiredService<IJobExecuter>();
+
+                        await jobExecuter.ExecuteServiceAsync();
+                    }
                 }
                 catch (Exception ex)
                 {

@@ -33,7 +33,7 @@ public class JobExecuter : IJobExecuter
 
                 await executorServico.ExecuteAsync();
 
-                await _servicoRepository.AtualizaDatasServico(servico);
+                //await _servicoRepository.AtualizaDatasServico(servico);
             }
             catch (Exception ex)
             {

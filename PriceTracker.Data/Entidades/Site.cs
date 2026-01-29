@@ -11,6 +11,8 @@ public class Site
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public long ID_SITE { get; set; }
     public string? NM_SITE { get; set; }
+    public string DS_XPATH_PRECO { get; set; } = string.Empty;
+
     public DateTime DT_CRIACAO { get; set; } = DateTime.Now;
 }
 
